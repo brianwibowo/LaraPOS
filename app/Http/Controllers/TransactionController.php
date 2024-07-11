@@ -11,18 +11,14 @@ use App\Customer;
 use App\Transaction;
 use App\User;
 use App\CompanyProfile;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 use App\Http\Requests\SaleRequest;
 use App\Http\Requests\TransactionRequest;
 
+
 class TransactionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $title = "Transaction List";
@@ -36,12 +32,6 @@ class TransactionController extends Controller
             'items' => $items
         ]);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create($transactionCode)
     {
         if (is_null($transactionCode)) {
@@ -66,13 +56,6 @@ class TransactionController extends Controller
             'subTotal' => $subTotal
         ]);
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(TransactionRequest $request)
     {
         $request = $request->all();
@@ -100,13 +83,6 @@ class TransactionController extends Controller
             ->update($data);
         return redirect()->route('transaction.create', $transactionCode)->with(['success' => 'Transaksi berhasil disimpan!', 'transactionCode' => $request['transaction_code']]);
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($transactionCode)
     {
         $title = "Transaction";
@@ -148,34 +124,13 @@ class TransactionController extends Controller
             'data' => $data
         ]);
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
     }
 
-    /**
-     * Show a transaction report by date in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function report(Request $request)
     {
         $title = "Transaction Report";

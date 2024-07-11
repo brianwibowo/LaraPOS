@@ -102,7 +102,7 @@
                                         </div>
                                         <select class="form-control" name="roles">
                                             <option value="admin" {{ ($item->roles === 'admin') ? 'selected' : '' }}>Admin</option>
-                                            <option value="member" {{ ($item->roles === 'member') ? 'selected' : '' }}>Member</option>
+                                            <option value="customer" {{ ($item->roles === 'customer') ? 'selected' : '' }}>Customer</option>
                                         </select>
                                     </div>
                                 </div>

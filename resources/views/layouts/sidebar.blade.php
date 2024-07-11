@@ -1,10 +1,10 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
       <div class="sidebar-brand">
-        <a href="index.html">LaraPOS</a>
+        <a href="index.html">KATALIS</a>
       </div>
       <div class="sidebar-brand sidebar-brand-sm">
-        <a href="index.html">LP</a>
+        <a href="index.html">KT24</a>
       </div>
       <ul class="sidebar-menu">
         <li class="menu-header">Dashboard</li>
@@ -28,7 +28,6 @@
 
             <li class="{{ (Request::url() === route('product.index')) ? 'active' : '' }}">
               <a class="nav-link" href="{{ route('product.index') }}">
-                <i class="ion-android-list"></i> <span>Product List</span></a>
             </li>
 
             <li class="{{ (Request::url() === route('product-category.index')) ? 'active' : '' }}">
@@ -47,16 +46,12 @@
             <a class="nav-link" href="{{ route('coupon.index') }}"><i class="ion-cash"></i> <span>Coupons</span></a>
           </li>
 
-          <li class="{{ (Request::url() === route('companyProfile.index')) ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('companyProfile.index') }}"><i class="ion-android-settings"></i> <span>Company Profile</span></a>
-          </li>
-
         </li>
       </li>
 
       @endif
 
-      <li class="menu-header">LaraPOS</li>
+      <li class="menu-header">Transaksi</li>
         <li class="{{ (Request::is('transaction/index') || Request::is('transaction/report') || Request::is('transaction/create/*')) ? 'dropdown active' : 'dropdown' }}">
           <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
             <i class="ion-ios-cart"></i> <span>Transaction</span>

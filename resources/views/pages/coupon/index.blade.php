@@ -33,7 +33,6 @@
                             <thead>                                 
                                 <tr>
                                     <th class="text-center">
-                                    #
                                     </th>
                                     <th>Kode Kupon</th>
                                     <th>Nama</th>

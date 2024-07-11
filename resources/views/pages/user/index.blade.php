@@ -33,7 +33,6 @@
                             <thead>                                 
                                 <tr>
                                     <th class="text-center">
-                                    #
                                     </th>
                                     <th>Foto</th>
                                     <th>Nama</th>

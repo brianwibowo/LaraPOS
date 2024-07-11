@@ -100,7 +100,7 @@
                                         </div>
                                         <select class="form-control" name="roles">
                                             <option value="admin" {{ (old('roles') === 'admin') ? 'selected' : '' }}>Admin</option>
-                                            <option value="member" {{ (old('roles') === 'member') ? 'selected' : '' }}>Member</option>
+                                            <option value="customer" {{ (old('roles') === 'customer') ? 'selected' : '' }}>Customer</option>
                                         </select>
                                     </div>
                                 </div>

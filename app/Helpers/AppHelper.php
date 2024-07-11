@@ -3,7 +3,7 @@
 namespace App\Helpers;
 
 use App\Transaction;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class AppHelper
 {

@@ -30,10 +30,10 @@
                             <thead>                                 
                                 <tr>
                                     <th class="text-center">
-                                    #
                                     </th>
                                     <th>Kode Transaksi</th>
                                     <th>Pelanggan</th>
+                                    <th>No. HP</th>
                                     <th>Total</th>
                                     <th>Tanggal</th>
                                 </tr>
@@ -44,6 +44,7 @@
                                         <td class="text-center">{{ $index + 1 }}</td>
                                         <td>{{ $item->transaction_code }}</td>
                                         <td>{{ $item->customer->name }}</td>
+                                        <td>{{ $item->customer->phone_number }}</td>
                                         <td>{{ number_format($item->grand_total, 0,',',',') }}</td>
                                         <td>{{ date('d-m-Y', strtotime($item->created_at)) }}</td>
                                     </tr>

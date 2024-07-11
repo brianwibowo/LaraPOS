@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes();
+Auth::routes(['verify' => true]);
+
 
 Route::prefix('/admin')
-    ->middleware('auth', 'admin')
+    ->middleware(['auth', 'admin'])
     ->group(function() {
         Route::get('/', 'HomeController@index');
         Route::resource('user', 'UserController');
